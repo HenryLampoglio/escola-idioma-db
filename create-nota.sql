@@ -2,7 +2,7 @@ CREATE TABLE `notas` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`aluno_id` INT(11) NULL DEFAULT NULL,
 	`nota` DOUBLE NULL DEFAULT NULL,
-	PRIMARY KEY (`id`) USING BTREE,
-	INDEX `aluno_id` (`aluno_id`) USING BTREE,
+	PRIMARY KEY (`id`),
+	INDEX `aluno_id` (`aluno_id`),
 	CONSTRAINT `aluno_id` FOREIGN KEY (`aluno_id`) REFERENCES `aluno` (`id`) ON UPDATE NO ACTION ON DELETE NO ACTION
 )
