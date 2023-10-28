@@ -5,5 +5,5 @@ CREATE TABLE `professor` (
 	`telefone` VARCHAR(20) NOT NULL DEFAULT '0' COLLATE 'utf8mb4_general_ci',
 	`email` VARCHAR(70) NOT NULL DEFAULT '0' COLLATE 'utf8mb4_general_ci',
 	`endereco` VARCHAR(150) NOT NULL DEFAULT '0' COLLATE 'utf8mb4_general_ci',
-	PRIMARY KEY (`Coluna 1`) USING BTREE
+	PRIMARY KEY (`Coluna 1`)
 )

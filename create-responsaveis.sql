@@ -5,5 +5,5 @@ CREATE TABLE `responsavel` (
 	`telefone` VARCHAR(20) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
 	`email` VARCHAR(70) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
 	`endereco` VARCHAR(150) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
-	PRIMARY KEY (`id`) USING BTREE
+	PRIMARY KEY (`id`)
 )
