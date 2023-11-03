@@ -1,0 +1,5 @@
+CREATE TABLE `classe` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`nivel` VARCHAR(30) NOT NULL,
+	PRIMARY KEY (`id`)
+)
