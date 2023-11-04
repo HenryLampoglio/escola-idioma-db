@@ -1,8 +1,8 @@
 CREATE TABLE `aluno` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
-	`nome` VARCHAR(200) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`nome` VARCHAR(200) NULL DEFAULT NULL,
 	`idade` INT(11) NULL DEFAULT NULL,
-	`telefone` VARCHAR(20) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`telefone` VARCHAR(20) NULL DEFAULT NULL,
 	`classe_id` INT(11) NULL DEFAULT NULL,
 	`responsavel_id` INT(11) NULL DEFAULT NULL,
 	PRIMARY KEY (`id`),
