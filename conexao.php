@@ -1,6 +1,1 @@
-<?php
-
-
-$conexao = mysqli_connect('localhost', 'root', '', 'escola-idioma');
-
-?>
+<?php $conexao = mysqli_connect('localhost', 'root', '', 'escola-idioma');?>
