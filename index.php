@@ -35,7 +35,7 @@
             </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="#">Consultar aula</a>
-                <a class="dropdown-item" href="#">Cadastrar aula</a>
+                <a class="dropdown-item" href="aulas/cadastrar_aula.php">Cadastrar aula</a>
                 <a class="dropdown-item" href="#">Atualizar dados de aula</a>
                 <a class="dropdown-item" href="#">Apagar dados de aula</a>
         </div>

@@ -24,12 +24,20 @@
 
         <div class="formulario">
             <label for="professor_id">ID do Professor:</label>
-            <input type="number" name="professor_id" id="professor_id" required>
+            <select name="professor_id" id="professor_id" required>
+            <option value="valor1">Valor 1</option>
+            <option value="valor2">Valor 2</option>
+            <option value="valor3">Valor 3</option>
+            </select>
         </div>
 
         <div class="formulario">
             <label for="classe_id">ID da Classe:</label>
-            <input type="number" name="classe_id" id="classe_id" required>
+            <select name="classe_id" id="classe_id" required>
+            <option value="valor1">Valor 1</option>
+            <option value="valor2">Valor 2</option>
+            <option value="valor3">Valor 3</option>
+            </select>
         </div>
 
         <input type="submit" value="Cadastrar">
@@ -37,7 +45,7 @@
 
     <footer>
         <p>Desenvolvido por:</p>
-        <p>Rocket & Grow</p>
+        <p>Cyberia Club</p>
     </footer>
 </body>
 </html>
