@@ -1,6 +1,6 @@
 CREATE TABLE `aula` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
-	`horario` VARCHAR(100) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`horario` VARCHAR(100) NULL DEFAULT NULL,
 	`sala_id` INT(11) NULL DEFAULT NULL,
 	`professor_id` INT(11) NULL DEFAULT NULL,
 	`classe_id` INT(11) NULL DEFAULT NULL,
