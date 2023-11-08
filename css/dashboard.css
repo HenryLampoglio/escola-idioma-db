@@ -1,0 +1,21 @@
+.nav
+{   
+    display: flex;
+    padding-inline: 100px;
+    justify-content: space-around;
+    width: 100%;
+    background-color: white;
+}
+
+.container_cards
+{
+    display: grid;
+    
+}
+
+.card
+{
+    display: flex;
+    margin-top: 5%;
+    margin-left: 25%;
+}
