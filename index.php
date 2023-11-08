@@ -23,10 +23,9 @@
             Professor
             </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="consulta_professor.php">Consultar professor</a>
-                <a class="dropdown-item" href="cadastrar_professor">Cadastrar professor</a>
-                <a class="dropdown-item" href="editar_professor">Atualizar dados de professor</a>
-                <a class="dropdown-item" href="apagar_professor">Apagar dados de professor</a>
+                <a class="dropdown-item" href="professor/consulta_professor.php">Consultar professor</a>
+                <a class="dropdown-item" href="professor/cadastrar_professor.php">Cadastrar professor</a>
+                <a class="dropdown-item" href="professor/editar_professor.php">Atualizar dados de professor</a>
         </div>
         </div>
         <div class="dropdown">
@@ -34,10 +33,9 @@
             Aulas
             </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Consultar aula</a>
-                <a class="dropdown-item" href="#">Cadastrar aula</a>
-                <a class="dropdown-item" href="#">Atualizar dados de aula</a>
-                <a class="dropdown-item" href="#">Apagar dados de aula</a>
+                <a class="dropdown-item" href="aulas/consulta_aula.php">Consultar aula</a>
+                <a class="dropdown-item" href="aulas/cadastrar_aula.php">Cadastrar aula</a>
+                <a class="dropdown-item" href="aulas/editar_aula.php">Atualizar dados de aula</a>
         </div>
         </div>
         <div class="dropdown">
@@ -46,10 +44,9 @@
             </a>
 
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Consultar aluno</a>
-                <a class="dropdown-item" href="#">Cadastrar aluno</a>
-                <a class="dropdown-item" href="#">Atualizar dados de aluno</a>
-                <a class="dropdown-item" href="#">Apagar dados de aluno</a>
+                <a class="dropdown-item" href="alunos/consulta_aluno.php">Consultar aluno</a>
+                <a class="dropdown-item" href="alunos/cadastrar_aluno.php">Cadastrar aluno</a>
+                <a class="dropdown-item" href="alunos/editar_aluno.php">Atualizar dados de aluno</a>
         </div>
         </div>
         <div class="dropdown">
@@ -57,10 +54,9 @@
             Turmas
             </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-               <a class="dropdown-item" href="#">Consultar classe</a>
-               <a class="dropdown-item" href="#">Cadastrar classe</a>
-               <a class="dropdown-item" href="#">Atualizar dados de classe</a>
-               <a class="dropdown-item" href="#">Apagar dados de classe</a>
+               <a class="dropdown-item" href="turma/consulta_turma.php">Consultar turmas</a>
+               <a class="dropdown-item" href="turma/cadastrar_turma.php">Cadastrar turmas</a>
+               <a class="dropdown-item" href="turma/editar_turma.php">Atualizar dados de turmas</a>
         </div>
         </div>
 
@@ -69,9 +65,9 @@
             Notas
             </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Consultar Notas</a>
-                <a class="dropdown-item" href="#">Cadastrar Notas</a>
-                <a class="dropdown-item" href="#">Atualizar Notas</a>
+                <a class="dropdown-item" href="notas/consulta_notas.php">Consultar Notas</a>
+                <a class="dropdown-item" href="notas/cadastrar_notas.php">Cadastrar Notas</a>
+                <a class="dropdown-item" href="notas/editar_notas.php">Atualizar Notas</a>
         </div>
         </div>
         </div>
