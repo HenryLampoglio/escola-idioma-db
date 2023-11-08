@@ -1,3 +1,5 @@
+<?php require '../conexao.php'; ?>
+
 <html>
 <head>
 <meta charset="utf-8">
@@ -16,27 +18,42 @@
         <div class="formulario">
             <label for="sala_id">ID da Sala:</label>
         <select name="sala_id" id="sala_id" required>
-            <option value="valor1">Valor 1</option>
-            <option value="valor2">Valor 2</option>
-            <option value="valor3">Valor 3</option>
+            <?php 
+            $sql = "SELECT id from sala";
+            $query = mysqli_query($conexao, $sql);
+            while($array = mysqli_fetch_array($query)){
+                $id_sala = $array['id'];
+                echo "<option valu='$id_sala'>$id_sala</option>";
+            }
+            ?>
         </select>
         </div>
 
         <div class="formulario">
             <label for="professor_id">ID do Professor:</label>
             <select name="professor_id" id="professor_id" required>
-            <option value="valor1">Valor 1</option>
-            <option value="valor2">Valor 2</option>
-            <option value="valor3">Valor 3</option>
+            <?php 
+            $sql = "SELECT nome from professor";
+            $query = mysqli_query($conexao, $sql);
+            while($array = mysqli_fetch_array($query)){
+                $professor_nome = $array['nome'];
+                echo "<option valu='$professor_nome'>$professor_nome</option>";
+            }
+            ?>
             </select>
         </div>
 
         <div class="formulario">
             <label for="classe_id">ID da Classe:</label>
             <select name="classe_id" id="classe_id" required>
-            <option value="valor1">Valor 1</option>
-            <option value="valor2">Valor 2</option>
-            <option value="valor3">Valor 3</option>
+            <?php 
+            $sql = "SELECT id from classe";
+            $query = mysqli_query($conexao, $sql);
+            while($array = mysqli_fetch_array($query)){
+                $id_classe = $array['id'];
+                echo "<option value='$id_classe'>$id_classe</option>";
+            }
+            ?>
             </select>
         </div>
 
