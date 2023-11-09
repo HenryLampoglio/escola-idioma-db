@@ -1,6 +1,5 @@
 <?php 
 
-file_put_contents('log.txt', file_get_contents('php://input'));
 
 function insertDb($time, $sala, $professor, $classe){
     require '../conexao.php';
@@ -33,12 +32,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $sala_id = $_POST['sala_id'];
         $time = $_POST['horario'];
         
-        // echo json_encode(array(
-        //     'classe_id' => $classe_id, 
-        //     'professor_id' => $professor_id, 
-        //     'sala_id' => $sala_id, 
-        //     'horario' => $time
-        // ));
+        file_put_contents('log.txt', json_encode(array('classe_id' => $classe_id, 'professor_id' => $professor_id, 'sala_id' => $sala_id, 'horario' => $time)));    
         
         insertDb($time, $sala_id, $professor_id, $classe_id);
        
