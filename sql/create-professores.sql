@@ -5,5 +5,5 @@ CREATE TABLE `professor` (
 	`telefone` VARCHAR(20) NOT NULL DEFAULT '0',
 	`email` VARCHAR(70) NOT NULL DEFAULT '0',
 	`endereco` VARCHAR(150) NOT NULL DEFAULT '0',
-	PRIMARY KEY (`Coluna 1`)
+	PRIMARY KEY (`id`)
 )
