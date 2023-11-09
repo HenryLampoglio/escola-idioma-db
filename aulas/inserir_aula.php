@@ -4,7 +4,7 @@
 function insertDb($time, $sala, $professor, $classe){
     require '../conexao.php';
 
-    $sql = "INSERT INTO aula(horario,sala_id,professor_id, classe_id ) values ('$time', '$sala_id','$professor_id','$classe_id')";
+    $sql = "INSERT INTO aula(horario,sala_id,professor_id, classe_id ) values ('$time', '$sala','$professor','$classe')";
     $query = mysqli_query($conexao, $sql);
     if($query){
         retorna(false,'Aula inserida!');

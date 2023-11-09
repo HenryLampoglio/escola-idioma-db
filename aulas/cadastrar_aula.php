@@ -83,10 +83,20 @@
             contentType: false,
             processData: false,
             success: function (json) {
-                console.log(json);
-                // var resposta = JSON.parse(json);
-                // console.log('a');
-                // console.log(resposta);
+                var resposta = JSON.parse(json);
+                if(resposta.erro == false){
+                    Swal.fire({
+                        icon: "success",
+                        title: "Sucesso",
+                        text: resposta.msg
+                    });
+                }else{
+                    Swal.fire({
+                        icon: "error",
+                        title: "Erro",
+                        text: resposta.msg
+                    });
+                }
                 // console.log(resposta.erro);
             }
         })
