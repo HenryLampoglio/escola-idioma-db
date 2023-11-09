@@ -1,0 +1,34 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:#0A3876;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h1 {
+    background-color: white;
+    padding: 10px;
+    }
+table, th, td {
+    background-color: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border:1px solid black;
+    text-align: center;
+}
+
+th, td{
+    border-radius: 12%;
+}
+
+footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+}
