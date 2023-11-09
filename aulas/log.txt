@@ -1,0 +1,4 @@
+<<<<<<< HEAD
+=======
+{"classe_id":"13","professor_id":"1","sala_id":"1","horario":"02:20"}
+>>>>>>> 466575c934ef5235ce4dfbd533fe3fbda4d76f73
