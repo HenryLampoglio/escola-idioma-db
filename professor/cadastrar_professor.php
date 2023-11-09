@@ -17,15 +17,26 @@
     </div>
 
     <div class="formulario">
-            <label for="nome">Materia:</label>
-            <input type="text" name="nome" id="nome" required>
+            <label for="materia">Materia:</label>
+            <input type="text" name="materia" id="materia" required>
+    </div>
+    
+    <div class="formulario">
+            <label for="telefone">Telefone:</label>
+            <input type="text" name="telefone" id="telefone" required>
     </div>
 
+    <div class="formulario">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+    </div>
+
+    <div class="formulario">
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" required>
+    </div>
     
-
     <input type="submit" value="Cadastrar">
-
-
 
     <footer>
         <p>Desenvolvido por:</p>
