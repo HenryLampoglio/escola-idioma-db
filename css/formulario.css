@@ -33,7 +33,7 @@ body {
     }
 
     select {
-    margin-left: 10px;
+    margin-left: 0 auto;
     width: 200px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -66,11 +66,13 @@ body {
     height: 10%;
     }
 
+
     .formulario {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 15px;
+    width: 50%;
     }
 
     .formulario label,
