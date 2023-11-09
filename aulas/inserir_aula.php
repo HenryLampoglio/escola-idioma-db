@@ -25,8 +25,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         
         $sql = "INSERT INTO aula('') values ('')";
         $query = mysqli_query($conexao, $sql);
-
-
        
     }
 }
