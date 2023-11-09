@@ -90,6 +90,10 @@
                         title: "Sucesso",
                         text: resposta.msg
                     });
+                    setTimeout(() => {
+                        window.location.reload();      
+                    }, 1000);
+
                 }else{
                     Swal.fire({
                         icon: "error",
@@ -97,7 +101,7 @@
                         text: resposta.msg
                     });
                 }
-                // console.log(resposta.erro);
+                console.log(resposta);
             }
         })
     });
