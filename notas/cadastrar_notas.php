@@ -11,18 +11,12 @@
         <div class="formulario">
             <label for="aluno_id">Aluno:</label>
         <select name="aluno_id" id="nota" required>
-            <option value="valor1">Valor 1</option>
-            <option value="valor2">Valor 2</option>
-            <option value="valor3">Valor 3</option>
         </select>
         </div>
 
         <div class="formulario">
-            <label for="nota">Professor:</label>
+            <label for="nota">Nota:</label>
             <select name="nota" id="nota" required>
-            <option value="valor1">Valor 1</option>
-            <option value="valor2">Valor 2</option>
-            <option value="valor3">Valor 3</option>
             </select>
         </div>
 
