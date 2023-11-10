@@ -58,8 +58,6 @@ function validaDados($sala_id, $professor_id, $classe_id){
 
 }
 
-
-
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     
     if(isset($_POST['classe_id']) && isset($_POST['sala_id']) && isset($_POST['professor_id']) && isset($_POST['horario'])){
