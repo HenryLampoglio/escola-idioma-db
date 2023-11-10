@@ -24,7 +24,7 @@ $classe_id = $array['classe_id'];
     <form id="cadastrar_aula" method="POST" action="">
         <div class="formulario">
             <label for="horario">Horário:</label>
-            <input type="time" name="horario" id="horario" required>
+            <input type="time" name="horario" id="horario" value="<?=$horario?>" required>
         </div>
 
         <div class="formulario">
