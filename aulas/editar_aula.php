@@ -96,7 +96,7 @@ $classe_id = $array['classe_id'];
             contentType: false,
             processData: false,
             success: function (json) {
-                console.log(json);
+                // console.log(json);
                 var resposta = JSON.parse(json);
                 if(resposta.erro == false){
                     Swal.fire({
@@ -115,7 +115,6 @@ $classe_id = $array['classe_id'];
                         text: resposta.msg
                     });
                 }
-                // console.log(resposta);
             }
         })
     });

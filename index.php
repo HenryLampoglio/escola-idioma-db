@@ -35,7 +35,7 @@ body{
         Aulas
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="aulas/consulta_aula">Consultar aula</a>
+            <a class="dropdown-item" href="aulas/aulas">Visualizar todas aulas</a>
             <a class="dropdown-item" href="aulas/cadastrar_aula">Cadastrar aula</a>
             <a class="dropdown-item" href="aulas/editar_aula">Atualizar dados de aula</a>
         </div>

@@ -19,9 +19,9 @@ if($_SERVER['REQUEST_METHOD'] === 'GET'){
             $sql = "DELETE from aula where id = '$id'";
             $query = mysqli_query($conexao, $sql);
             if($query){
-                header("Location: resultado_consulta_aula?delete=y");
+                header("Location: aulas?delete=y");
             }else{
-                header("Location: resultado_consulta_aula?delete=n");
+                header("Location: aulas?delete=n");
             }
         }
     }
@@ -53,6 +53,5 @@ if($_SERVER['REQUEST_METHOD'] === 'GET'){
         }else{
             retorna(false,MSGSUCCESS);
         }
-
     }
 }

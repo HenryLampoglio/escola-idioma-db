@@ -1,6 +1,5 @@
 <?php 
 
-
 function insertDb($time, $sala, $professor, $classe){
     require '../conexao.php';
 
@@ -72,12 +71,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         if(validaDados($sala_id, $professor_id, $classe_id)){
             insertDb($time, $sala_id, $professor_id, $classe_id);
         }else{
-            retorna(true, 'Ocorreu algum erro...1');
+            retorna(true, 'Ocorreu algum erro...');
             die();
         }
 
     }else{
-        retorna(true, 'Ocorreu algum erro...2');
+        retorna(true, 'Ocorreu algum erro...');
         die();
     }
 }
