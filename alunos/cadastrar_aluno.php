@@ -17,17 +17,17 @@
 
         <div class="formulario">
             <label for="aluno_id">Idade:</label>
-            <input type="number" name="idade" id="idade" required>
+            <input type="number" name="idade" id="idade" min="1">
         </div>
 
         <div class="formulario">
             <label for="aluno_id">Telefone:</label>
-            <input type="number" name="idade" id="idade" required>
+            <input type="text" name="telefone" id="telefone" required>
         </div>
 
         <div class="formulario">
             <label for="classe_id">Classe:</label>
-            <select name="classe_id" id="classe_id" required>
+            <select name="classe" id="classe" required>
             <?php 
             $sql = "SELECT id from classe";
             $query = mysqli_query($conexao, $sql);
@@ -41,7 +41,16 @@
 
         <div class="formulario">
             <label for="responsavel_id">Nome do Responsavel:</label>
-            <select name="responsavel_id" id="responsavel_id" required>
+            <select name="responsavel" id="responsavel" required>
+            <?php 
+            $sql = "SELECT * from responsavel";
+            $query = mysqli_query($conexao, $sql);
+            while($array = mysqli_fetch_array($query)){
+                $id_professor = $array['id'];
+                $nome_professor = $array['nome'];
+                echo "<option value='$id_professor'>$nome_professor</option>";
+            }
+            ?>
             </select>
         </div>
         
@@ -62,30 +71,31 @@
 
         $.ajax({
             method: "POST",
-            // url: "inserir_aluno.php",]
+            url: "inserir_aluno.php",
             data: formData,
             contentType: false,
             processData: false,
             success: function (json) {
-                var resposta = JSON.parse(json);
-                if(resposta.erro == false){
-                    Swal.fire({
-                        icon: "success",
-                        title: "Sucesso",
-                        text: resposta.msg
-                    });
-                    setTimeout(() => {
-                        window.location.reload();      
-                    }, 1000);
+                console.log(json);
+                // var resposta = JSON.parse(json);
+                // if(resposta.erro == false){
+                //     Swal.fire({
+                //         icon: "success",
+                //         title: "Sucesso",
+                //         text: resposta.msg
+                //     });
+                //     setTimeout(() => {
+                //         window.location.reload();      
+                //     }, 1000);
 
-                }else{
-                    Swal.fire({
-                        icon: "error",
-                        title: "Erro",
-                        text: resposta.msg
-                    });
-                }
-                console.log(resposta);
+                // }else{
+                //     Swal.fire({
+                //         icon: "error",
+                //         title: "Erro",
+                //         text: resposta.msg
+                //     });
+                // }
+                // console.log(resposta);
             }
         })
     });
