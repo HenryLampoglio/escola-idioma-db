@@ -1,17 +1,14 @@
 <?php 
 
 
-function insertDb($time, $sala, $professor, $classe){
+function insertDb($nome, $idade, $classe, $telefone,  $responsavel){
     require '../conexao.php';
 
-    $sql = "INSERT INTO aula(horario,sala_id,professor_id, classe_id ) values ('$time', '$sala','$professor','$classe')";
+    $sql = "INSERT INTO aluno(nome,idade,telefone, classe_id, responsavel_id)
+        values ('$nome', '$idade','$telefone','$classe', '$responsavel')";
     $query = mysqli_query($conexao, $sql);
-    if($query){
-        retorna(false,'Aula inserida!');
-    }else{
-        retorna(true,'Erro ao inserir aula.');
-        die();
-    }
+    
+    return $query ? retorna(false,'Aluno cadastrado!') : retorna(true,'Erro ao cadastrar aluno...'); 
 }
 
 function retorna($erro, $msg){
@@ -21,65 +18,40 @@ function retorna($erro, $msg){
     ));
 }
 
-function validaDados($sala_id, $professor_id, $classe_id){
+function validaDados($responsavel){
     require '../conexao.php';
-    $sql = "SELECT * from sala where id = '$sala_id'";
+    $sql = "SELECT * from responsavel where id = '$responsavel'";
     $query = mysqli_query($conexao, $sql);
     
-    if(mysqli_num_rows($query) >= 1){
-        $sala = true;
-    }else{
-        $sala =  false;
-    }
 
-    $sql = "SELECT * from professor where id = '$professor_id'";
-    $query = mysqli_query($conexao, $sql);
-    
-    if(mysqli_num_rows($query) >= 1){
-        $professor = true;
-    }else{
-        $professor =  false;
-    }
-
-    $sql = "SELECT * from classe where id = '$classe_id'";
-    $query = mysqli_query($conexao, $sql);
-    
-    if(mysqli_num_rows($query) >= 1){
-        $classe = true;
-    }else{
-        $classe =  false;
-    }
-
-    if($sala && $professor && $classe){
-        return true;
-    }else{
-        return false;
-    }
-
+    return mysqli_num_rows($query) >= 1 ? true : false;
 }
 
 
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     
-    if(isset($_POST['nome']) && isset($_POST['idade']) && isset($_POST['classe']) && isset($_POST['responsavel'])){
+    if(isset($_POST['nome']) && isset($_POST['idade']) && isset($_POST['classe']) && isset($_POST['responsavel']) && isset($_POST['telefone'])){
         
         $nome  = $_POST['nome'];
         $idade = $_POST['idade'];
         $classe = $_POST['classe'];
         $responsavel = $_POST['responsavel'];
+        $telefone = $_POST['telefone'];
+
+        file_put_contents('log.txt', json_encode(array('nome' => $nome, 'idade' => $idade, 'classe' => $classe, 'responsavel' => $responsavel, 'telefone'=> $telefone)));    
         
-        file_put_contents('log.txt', json_encode(array('nome' => $nome, 'idade' => $idade, 'classe' => $classe, 'responsavel' => $responsavel)));    
-        
-        // if(validaDados($sala_id, $professor_id, $classe_id)){
-        //     insertDb($time, $sala_id, $professor_id, $classe_id);
-        // }else{
-        //     retorna(true, 'Ocorreu algum erro...1');
-        //     die();
-        // }
+        if(validaDados($responsavel)){
+            insertDb($nome, $idade, $classe, $telefone, $responsavel);
+        }else{
+            retorna(true, 'Ocorreu algum erro...');
+            die();
+            
+        }
 
     }else{
-        retorna(true, 'Ocorreu algum erro...2');
+        retorna(true, 'Ocorreu algum erro...
+        ');
         die();
     }
 }

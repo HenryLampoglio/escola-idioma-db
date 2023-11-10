@@ -16,17 +16,17 @@
         </div>
 
         <div class="formulario">
-            <label for="aluno_id">Idade:</label>
-            <input type="number" name="idade" id="idade" min="1">
+            <label for="idade">Idade:</label>
+            <input type="number" name="idade" id="idade" min="1" max="17">
         </div>
 
         <div class="formulario">
-            <label for="aluno_id">Telefone:</label>
-            <input type="text" name="telefone" id="telefone" required>
+            <label for="telefone">Telefone:</label>
+            <input type="number" name="telefone" id="telefone"  required>
         </div>
 
         <div class="formulario">
-            <label for="classe_id">Classe:</label>
+            <label for="classe">Classe:</label>
             <select name="classe" id="classe" required>
             <?php 
             $sql = "SELECT id from classe";
@@ -40,7 +40,7 @@
         </div>
 
         <div class="formulario">
-            <label for="responsavel_id">Nome do Responsavel:</label>
+            <label for="responsavel">Nome do Responsavel:</label>
             <select name="responsavel" id="responsavel" required>
             <?php 
             $sql = "SELECT * from responsavel";
@@ -62,6 +62,8 @@
         <p>Cyberia Club</p>
     </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 
      $("#cadastrar_aluno").on("submit", function (event) {
@@ -77,24 +79,24 @@
             processData: false,
             success: function (json) {
                 console.log(json);
-                // var resposta = JSON.parse(json);
-                // if(resposta.erro == false){
-                //     Swal.fire({
-                //         icon: "success",
-                //         title: "Sucesso",
-                //         text: resposta.msg
-                //     });
-                //     setTimeout(() => {
-                //         window.location.reload();      
-                //     }, 1000);
+                var resposta = JSON.parse(json);
+                if(resposta.erro == false){
+                    Swal.fire({
+                        icon: "success",
+                        title: "Sucesso",
+                        text: resposta.msg
+                    });
+                    setTimeout(() => {
+                        window.location.reload();      
+                    }, 1000);
 
-                // }else{
-                //     Swal.fire({
-                //         icon: "error",
-                //         title: "Erro",
-                //         text: resposta.msg
-                //     });
-                // }
+                }else{
+                    Swal.fire({
+                        icon: "error",
+                        title: "Erro",
+                        text: resposta.msg
+                    });
+                }
                 // console.log(resposta);
             }
         })
