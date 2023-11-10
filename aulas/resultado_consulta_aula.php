@@ -1,3 +1,12 @@
+<?php 
+if(isset($_GET['delete'])){
+    if($_GET['delete'] == 'y'){
+        echo '<script> alert("Registro deletado com sucesso");</script>';
+    }else if($_GET['delete'] == 'n'){
+        echo '<script> alert("Erro ao deletar o registro");</script>';
+    }
+    
+}?>
 <html>
 <head>
 <meta charset="utf-8">
