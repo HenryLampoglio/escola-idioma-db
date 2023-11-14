@@ -43,6 +43,9 @@
         <p>Cyberia Club</p>
     </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
 
      $("#cadastrar_professor").on("submit", function (event) {
@@ -52,7 +55,7 @@
 
         $.ajax({
             method: "POST",
-            // url: "inserir_aluno.php",]
+            url: "inserir_professor.php",
             data: formData,
             contentType: false,
             processData: false,
@@ -65,7 +68,7 @@
                         text: resposta.msg
                     });
                     setTimeout(() => {
-                        window.location.reload();      
+                        window.location.href = 'professores';      
                     }, 1000);
 
                 }else{
@@ -75,7 +78,6 @@
                         text: resposta.msg
                     });
                 }
-                console.log(resposta);
             }
         })
     });
