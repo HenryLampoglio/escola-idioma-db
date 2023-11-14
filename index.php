@@ -27,7 +27,6 @@ body{
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="professor/professores">Visualizar os professores</a>
             <a class="dropdown-item" href="professor/cadastrar_professor">Cadastrar professor</a>
-            <a class="dropdown-item" href="professor/editar_professor">Atualizar dados de professor</a>
         </div>
     </div>
     <div class="dropdown">
@@ -37,7 +36,6 @@ body{
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="aulas/aulas">Visualizar todas aulas</a>
             <a class="dropdown-item" href="aulas/cadastrar_aula">Cadastrar aula</a>
-            <a class="dropdown-item" href="aulas/editar_aula">Atualizar dados de aula</a>
         </div>
     </div>
     <div class="dropdown">
@@ -48,7 +46,6 @@ body{
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="alunos/alunos">Visualizar todos os alunos</a>
             <a class="dropdown-item" href="alunos/cadastrar_aluno">Cadastrar aluno</a>
-            <a class="dropdown-item" href="alunos/editar_aluno">Atualizar dados de aluno</a>
         </div>
     </div>
 
@@ -60,7 +57,6 @@ body{
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="responsavel/responsavel">Visualizar responsavel</a>
             <a class="dropdown-item" href="responsavel/cadastrar_responsavel">Cadastrar responsavel</a>
-            <a class="dropdown-item" href="responsavel/editar_responsavel">Atualizar dados de responsavel</a>
         </div>
     </div>
 
@@ -71,7 +67,6 @@ body{
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="turma/turma">Visualizar turmas</a>
             <a class="dropdown-item" href="turma/cadastrar_turma">Cadastrar turmas</a>
-            <a class="dropdown-item" href="turma/editar_turma">Atualizar dados de turmas</a>
         </div>
     </div>
     <div class="dropdown">
@@ -81,7 +76,6 @@ body{
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="notas/notas">Visualizar as Notas</a>
             <a class="dropdown-item" href="notas/cadastrar_notas">Cadastrar Notas</a>
-            <a class="dropdown-item" href="notas/editar_notas">Atualizar Notas</a>
         </div>
     </div>
 </div> 
