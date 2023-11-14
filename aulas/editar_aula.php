@@ -71,7 +71,7 @@ $classe_id = $array['classe_id'];
             </select>
         </div>
 
-        <input type="submit" value="Cadastrar">
+        <input type="submit" value="Editar">
     </form>
 
     <footer>
