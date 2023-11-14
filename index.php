@@ -25,11 +25,7 @@ body{
         Professor
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-<<<<<<< HEAD
             <a class="dropdown-item" href="professor/professores">Consultar professor</a>
-=======
-            <a class="dropdown-item" href="professor/professor">Visualizar os professor</a>
->>>>>>> 9bf6b9ae38053630925f21f3cafc449525a09fa5
             <a class="dropdown-item" href="professor/cadastrar_professor">Cadastrar professor</a>
             <a class="dropdown-item" href="professor/editar_professor">Atualizar dados de professor</a>
         </div>
