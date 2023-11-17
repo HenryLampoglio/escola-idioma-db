@@ -13,6 +13,10 @@ body{
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('https://i.pinimg.com/originals/b5/aa/17/b5aa17f0ebb5bb72c039e0d79e274000.png');
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 </style>
 <div class="nav">
@@ -92,6 +96,21 @@ body{
             <p class="card-text">Diversas turmas disponíveis</p>
         </div>
     </div>
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://img.freepik.com/fotos-premium/um-estudante-vestindo-um-bone-e-beca-de-formatura-fica-em-frente-a-um-predio_765582-6527.jpg">
+        <div class="card-body">
+            <p class="card-text">Certificado com reconhecimento internacional</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://s3.amazonaws.com/uploads.lms.novaescola.org.br/trilha/ea1ea719-d08e-47d7-a04c-6a3160fd31c7.png">
+        <div class="card-body">
+            <p class="card-text">Há 15 anos inspirando jovens</p>
+        </div>
+    </div>
+
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
