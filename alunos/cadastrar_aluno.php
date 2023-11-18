@@ -88,7 +88,7 @@
                         text: resposta.msg
                     });
                     setTimeout(() => {
-                        window.location.reload();      
+                        window.location.href = 'alunos';      
                     }, 1000);
 
                 }else{
