@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET'){
             $sql = "DELETE from professor where id = '$id'";
             $query = mysqli_query($conexao, $sql);
             if($query){
-                header("Location: professores?delete=y");
+                header("Location: professores?delete=y&id=$id");
             }else{
                 header("Location: professores?delete=n");
             }
