@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET'){
             $sql = "DELETE from responsavel where id = '$id'";
             $query = mysqli_query($conexao, $sql);
             if($query){
-                header("Location: responsavel?delete=y");
+                header("Location: responsavel?delete=y&id=$id");
             }else{
                 header("Location: responsavel?delete=n");
             }
