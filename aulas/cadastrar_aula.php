@@ -91,7 +91,7 @@
                         text: resposta.msg
                     });
                     setTimeout(() => {
-                        window.location.reload();      
+                        window.location.href = 'aulas';      
                     }, 1000);
 
                 }else{

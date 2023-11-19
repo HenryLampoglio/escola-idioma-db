@@ -83,7 +83,7 @@ function toastDeleteError(){
 
 <?php 
 if(isset($_GET['delete'])){
-    if($_GET['delete'] == 'y'){]
+    if($_GET['delete'] == 'y'){
         $idget = $_GET['id'];
         echo "<script> toastDelete($idget)</script>";
     }else if($_GET['delete'] == 'n'){

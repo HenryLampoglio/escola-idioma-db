@@ -1,1 +1,1 @@
-{"classe_id":"1","professor_id":"1","sala_id":"1","horario":"21:12"}
+{"classe_id":"23","professor_id":"8","sala_id":"1","horario":"23:13"}
