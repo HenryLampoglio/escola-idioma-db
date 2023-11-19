@@ -15,15 +15,10 @@ function retorna($erro, $msg){
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
         
-    $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
-    $telefone = $_POST['telefone'];
-    $email = $_POST['email'];
-    $endereco = $_POST['endereco'];
+    $idioma = $_POST['idioma'];
     $id = $_POST['id'];
     
-    $sql = "UPDATE responsavel set nome = '$nome', cpf = '$cpf', telefone = '$telefone',
-        email = '$email', endereco = '$endereco' where id = '$id'";
+    $sql = "UPDATE classe set idioma = '$idioma' where id = '$id'";
     $query = mysqli_query($conexao, $sql);
 
     if(!$query){

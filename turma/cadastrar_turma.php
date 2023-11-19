@@ -23,6 +23,8 @@
         <p>Cyberia Club</p>
     </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 
      $("#cadastrar_turma").on("submit", function (event) {
@@ -32,7 +34,7 @@
 
         $.ajax({
             method: "POST",
-            // url: "inserir_aluno.php",]
+            url: "inserir_turma.php",
             data: formData,
             contentType: false,
             processData: false,
@@ -45,7 +47,7 @@
                         text: resposta.msg
                     });
                     setTimeout(() => {
-                        window.location.reload();      
+                        window.location.href = 'turma';      
                     }, 1000);
 
                 }else{
@@ -55,7 +57,6 @@
                         text: resposta.msg
                     });
                 }
-                console.log(resposta);
             }
         })
     });
