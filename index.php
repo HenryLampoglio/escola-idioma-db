@@ -91,7 +91,7 @@ body{
                 <a class="dropdown-item" href="salas/cadastrar_sala">Cadastrar Salas</a>
             </div>
         </div>
-        <input type="image" src="https://cdn.icon-icons.com/icons2/2518/PNG/512/logout_icon_151219.png">
+        <a href="logout.php"><input type="image" src="https://cdn.icon-icons.com/icons2/2518/PNG/512/logout_icon_151219.png"></a>
     </div>
 </div>  
 
