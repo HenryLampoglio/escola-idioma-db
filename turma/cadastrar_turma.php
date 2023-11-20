@@ -38,7 +38,7 @@
             data: formData,
             contentType: false,
             processData: false,
-            success: function (json) {
+            success: function (json) {console.log(json)
                 var resposta = JSON.parse(json);
                 if(resposta.erro == false){
                     Swal.fire({

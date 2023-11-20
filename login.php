@@ -14,7 +14,7 @@
             <input type="text" name="user" placeholder="Digite seu login" autofocus="true" />
             <label for="password">Senha</label>
             <input type="password" name="pass" placeholder="Digite sua senha" />
-            <input type="submit" value="acessar" class="btn" />
+            <input type="submit" value="Acessar" class="btn" />
         </form>
     </div>  
   </body>

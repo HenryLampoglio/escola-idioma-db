@@ -24,7 +24,7 @@ function retorna($erro, $msg){
         }
 
     }else{
-        retorna(true, 'Ocorreu algum erro...');
+        retorna(true, 'Ocorreu algum erro ...');
         die();
     }
 }
