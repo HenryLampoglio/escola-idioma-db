@@ -10,6 +10,7 @@
     <h1><a href="../index.php"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg></a>    Consulta aulas</h1>
     <table>
         <tr>
+            <th>Dia da semana</th>
             <th>Horario</th>
             <th>Sala</th>
             <th>Professor</th>
@@ -17,7 +18,7 @@
         </tr>
         <?php
         require '../conexao.php';
-        $sql = "SELECT au.id, au.horario, 
+        $sql = "SELECT au.id, au.horario, au.dia_semana, 
         (SELECT id from sala where id = au.sala_id limit 1) as sala, 
         (SELECT nome from professor where id = au.professor_id limit 1) as professor,  
         (SELECT id from classe where id = au.classe_id limit 1) as classe
@@ -25,12 +26,28 @@
         $query = mysqli_query($conexao, $sql);
         while($array = mysqli_fetch_array($query)){
             $id = $array['id']; 
+            $dia_semana = $array['dia_semana'];
             $horario = $array['horario'];
             $sala = $array['sala'];
             $professor = $array['professor']; 
             $classe = $array['classe'];
 
+            if($dia_semana == 1){
+                $dia_semana =  'Segunda-feira';
+            }else if($dia_semana == 2){
+                $dia_semana =  'Terça-feira';
+            }else if($dia_semana == 3){
+                $dia_semana =  'Quarta-feira';
+            }else if($dia_semana == 4){
+                $dia_semana =  'Quinta-feira';
+            }else if($dia_semana == 5){
+                $dia_semana =  'Sexta-feira';
+            }else if($dia_semana == 6){
+                $dia_semana =  'Sábado';
+            }
+
         echo "<tr>";
+            echo "<td>$dia_semana</td>";
             echo "<td>$horario</td>";
             echo "<td>$sala</td>";
             echo "<td>$professor</td>";
