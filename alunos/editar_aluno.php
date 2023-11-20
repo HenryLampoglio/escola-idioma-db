@@ -1,5 +1,7 @@
 <?php 
 require '../conexao.php';
+ include_once '../validacao.php';
+
 
 $idGET = $_GET['id'];
 

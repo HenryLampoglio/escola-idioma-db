@@ -1,5 +1,6 @@
 <?php 
 require '../conexao.php';?>
+<?php include_once '../validacao.php';?>
 <html>
 <head>
 <meta charset="utf-8">
